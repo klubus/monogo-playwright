@@ -1,14 +1,14 @@
 import { Page } from "@playwright/test";
 import { BasePage } from "./base.page";
-import { cookiesGotIt, confirmAge, homeData } from "../data/home.data";
+import { homeData } from "../data/home.data";
 import { actualLanguage } from "../../tests/product.spec";
 
 export class HomePage extends BasePage {
   constructor(page: Page) {
     super(page);
   }
-  _actualLanguage = actualLanguage;
-  homeDataLanguages = homeData[this._actualLanguage];
+  protected _actualLanguage = actualLanguage;
+  private homeDataLanguages = homeData[this._actualLanguage];
 
   async confirmCookiesAndAge(): Promise<void> {
     await this.page

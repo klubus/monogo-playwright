@@ -9,8 +9,8 @@ export class ProductPage extends BasePage {
   }
   //url = "";
 
-  _actualLanguage = actualLanguage;
-  productDataLanguages = productData[this._actualLanguage];
+  protected _actualLanguage = actualLanguage;
+  private productDataLanguages = productData[this._actualLanguage];
 
   productPloomXAdvanced = this.page.locator(
     '//div[@data-sku="ploom-x-advanced"]'

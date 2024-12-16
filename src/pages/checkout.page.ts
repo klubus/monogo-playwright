@@ -9,8 +9,8 @@ export class CheckoutPage extends BasePage {
   }
   //url = "";
 
-  _actualLanguage = actualLanguage;
-  checkoutDataLanguages = checkoutData[this._actualLanguage];
+  protected _actualLanguage = actualLanguage;
+  private checkoutDataLanguages = checkoutData[this._actualLanguage];
 
   removeFirstItem = this.page
     .getByTestId("regular-cart-list")

@@ -1,6 +1,6 @@
-export enum SupportedLanguages {
-  English = "https://www.ploom.co.uk/en",
-  Polish = "https://www.ploom.pl/pl",
+export enum supportedLanguages {
+  english = "https://www.ploom.co.uk/en",
+  polish = "https://www.ploom.pl/pl",
 }
 
 export enum languages {
@@ -10,9 +10,9 @@ export enum languages {
 
 export const currentLanguageWebsite = {
   [languages.english]: {
-    language: SupportedLanguages.English,
+    language: supportedLanguages.english,
   },
   [languages.polish]: {
-    language: SupportedLanguages.Polish,
+    language: supportedLanguages.polish,
   },
 };

@@ -1,10 +1,10 @@
-import { APIResponse, expect, Page } from "@playwright/test";
-import { currentLanguageWebsite, SupportedLanguages } from "../data/base.data";
+import { expect, Page } from "@playwright/test";
+import { currentLanguageWebsite } from "../data/base.data";
 import { actualLanguage } from "../../tests/product.spec";
 
 export class BasePage {
-  _actualLanguage = actualLanguage;
-  websitelanguage = currentLanguageWebsite[this._actualLanguage];
+  protected _actualLanguage = actualLanguage;
+  protected websitelanguage = currentLanguageWebsite[this._actualLanguage];
 
   url = this.websitelanguage.language;
   constructor(protected page: Page) {}
