@@ -1,4 +1,4 @@
-import { test, expect, Page } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 import { HomePage } from "../src/pages/home.page";
 import { ProductPage } from "../src/pages/product.page";
 import { CheckoutPage } from "../src/pages/checkout.page";
@@ -49,7 +49,7 @@ test.describe("product testing", () => {
 
     // Assert
     await expect(checkoutPage.emptyCartInformationLocator).toContainText(
-      checkoutPage.nazwa,
+      checkoutPage.nazwa
     );
   });
 

@@ -20,12 +20,13 @@ export class BasePage {
     const links = page.getByRole("link");
     const allLinks = await links.all();
     const allHrefs = await Promise.all(
-      allLinks.map((link) => link.getAttribute("href")),
+      allLinks.map((link) => link.getAttribute("href"))
     );
 
     const allValidHrefs = allHrefs.reduce((links, link) => {
       expect.soft(link).toBeTruthy();
 
+      // eslint-disable-next-line no-empty
       if (link?.includes("https")) {
       } else {
         link = "https://www.ploom.co.uk" + link;
