@@ -17,7 +17,7 @@ export class CheckoutPage extends BasePage {
     .getByTestId("cartRemoveButton");
   submitRemovingItem = this.page.getByTestId("remove-item-submit-button");
   emptyCartInformationLocator = this.page.locator(
-    "//div[@class='CartItemList-module-emptyMessage-C5SnM']"
+    "//div[@class='CartItemList-module-emptyMessage-C5SnM']",
   );
   nazwa = this.checkoutDataLanguages.emptyCartInformationText;
 

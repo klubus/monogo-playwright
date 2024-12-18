@@ -13,15 +13,15 @@ export class ProductPage extends BasePage {
   private productDataLanguages = productData[this._actualLanguage];
 
   productPloomXAdvanced = this.page.locator(
-    '//div[@data-sku="ploom-x-advanced"]'
+    '//div[@data-sku="ploom-x-advanced"]',
   );
 
   productPloomXAdvancedRoseShimmer = this.page.locator(
-    '//div[@data-sku="16199177"]'
+    '//div[@data-sku="16199177"]',
   );
 
   productAddedToCartInformation = this.page.locator(
-    this.productDataLanguages.productAddedToCartInformationLocator
+    this.productDataLanguages.productAddedToCartInformationLocator,
   );
 
   addProductToCart = this.page.getByTestId("pdpAddToProduct");

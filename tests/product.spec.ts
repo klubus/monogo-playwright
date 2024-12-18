@@ -49,7 +49,7 @@ test.describe("product testing", () => {
 
     // Assert
     await expect(checkoutPage.emptyCartInformationLocator).toContainText(
-      checkoutPage.nazwa
+      checkoutPage.nazwa,
     );
   });
 
